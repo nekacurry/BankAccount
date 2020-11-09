@@ -1,8 +1,10 @@
+import random
+
 class BankAccount:
   def __init__(self, name):
     self.full_name = name
-    self.routing_number = 86948275
-    self.account_number = 38576938
+    self.routing_number = 869482752
+    self.account_number = random.randint(00000000, 99999999)
     self.balance = 0
   
   def deposit(self, amount):
