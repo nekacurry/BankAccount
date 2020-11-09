@@ -26,9 +26,16 @@ class BankAccount:
     interest = self.balance *  m_interest
     self.balance += interest
 
+  def print_receipt(self):
+    print(f"""
+          {self.full_name}
+          Account No.:****{str(self.account_number)}
+          Routing No.: {self.routing_number}
+          Balance: ${round(self.balance, 2)}""")
 
 anneka = BankAccount("Anneka Curry")
 anneka.deposit(50)
 anneka.withdraw(10)
 anneka.add_interest()
 anneka.get_balance()
+anneka.print_receipt()
