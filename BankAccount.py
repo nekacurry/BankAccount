@@ -18,7 +18,17 @@ class BankAccount:
       self.balance -= amount
       print(f"Amount Withdrawn: ${amount}")
 
+  def get_balance(self):
+    print(f"You have ${round(self.balance, 2)} remaining in your account! Don't spend it all in one place ;)")
+
+  def add_interest(self):
+    m_interest = 0.00083
+    interest = self.balance *  m_interest
+    self.balance += interest
+
 
 anneka = BankAccount("Anneka Curry")
 anneka.deposit(50)
-anneka.withdraw(60)
+anneka.withdraw(10)
+anneka.add_interest()
+anneka.get_balance()
