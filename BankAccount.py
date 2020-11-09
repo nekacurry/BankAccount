@@ -9,5 +9,16 @@ class BankAccount:
     self.balance += amount
     print (f"Amount Deposited: ${amount}")
 
+  def withdraw(self,amount):
+    overdraft_fee = 10
+    if amount > self.balance:
+      self.balance -= overdraft_fee
+      print("Insufficient funds")
+    else:
+      self.balance -= amount
+      print(f"Amount Withdrawn: ${amount}")
+
+
 anneka = BankAccount("Anneka Curry")
 anneka.deposit(50)
+anneka.withdraw(60)
