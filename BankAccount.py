@@ -29,13 +29,29 @@ class BankAccount:
   def print_receipt(self):
     print(f"""
           {self.full_name}
-          Account No.:****{str(self.account_number)}
+          Account No.:****{str(self.account_number)[-4:]}
           Routing No.: {self.routing_number}
           Balance: ${round(self.balance, 2)}""")
 
 anneka = BankAccount("Anneka Curry")
-anneka.deposit(50)
-anneka.withdraw(10)
+anneka.deposit(70)
+anneka.withdraw(80)
 anneka.add_interest()
 anneka.get_balance()
 anneka.print_receipt()
+
+tori = BankAccount("Victoria Murray")
+tori.deposit(500)
+tori.withdraw(50)
+tori.add_interest()
+tori.get_balance()
+tori.print_receipt()
+
+cay = BankAccount("Caylin Kaunas")
+cay.deposit(2000)
+cay.withdraw(350)
+cay.add_interest()
+cay.get_balance()
+cay.print_receipt()
+
+
